@@ -34,7 +34,7 @@ app.post("/xyz/serve/track/:num", async (req, res) => {
                 message: "Unauthorized"
             })
         }
-        const token = decrypt("salty", key)
+        const token = decrypt("nottysalty", key)
         const url = `https://api.postex.pk/services/integration/api/order/v1/track-order/${num}`
         const response = await fetch(url, {
             method: "GET",
